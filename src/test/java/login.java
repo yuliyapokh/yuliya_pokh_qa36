@@ -56,13 +56,13 @@ public class login {
         WebElement email = wd.findElement(By.name("email"));
         email.click();
         email.clear();
-        email.sendKeys("pokhy@i2.ua");
+        email.sendKeys("pokhy@i22.ua");
 
         //find password + click+ clear + type
         WebElement password = wd.findElement(By.name("password"));
         password.click();
         password.clear();
-        password.sendKeys("Yyp12345!");
+        password.sendKeys("Jjp12345!");
 
 
         //submit form
