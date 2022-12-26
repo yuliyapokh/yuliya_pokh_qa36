@@ -81,7 +81,42 @@ public class login {
     
 
     @Test
-    public void registrationSuccess(){
+    public void ccsLocatorsTest()
+    {
+        // нужно перейти на страницу логина, так как на главной странице мало элементов для поиска и тренировки
+        // переход на страницу логина тут:
+        wd.findElement(By.linkText("LOGIN")).click();
+
+        // На странице логин найти несколько элементов по их  tagname
+
+        wd.findElement(By.tagName("div"));
+        WebElement el4 = wd.findElement(By.cssSelector("[name='email']"));
+        WebElement el5 = wd.findElement(By.cssSelector("[name='password']"));
+
+        // ON Login PAGE find some elements by class
+        wd.findElement(By.cssSelector(".active"));
+
+        // На странице логин найти несколько элементов по их  attribute
+        wd.findElement(By.cssSelector("[aria-current='page']"));
+        wd.findElement(By.cssSelector("[placeholder='Email']"));
+        wd.findElement(By.cssSelector("[placeholder='Password']"));
+
+        //На странице логин найти  элемент с  атрибутом placeholder, значение которого начинается на "Pass"
+        WebElement el1 = wd.findElement(By.cssSelector("[placeholder ^='Pass']"));
+        //На странице логин найти  элемент с  атрибутом placeholder, значение которого  начинается на  "ass"
+        WebElement el2 = wd.findElement(By.cssSelector("[placeholder ^='ass']"));
+        //На странице логин найти  элемент с  атрибутом placeholder, значение которого заканчивается на "ord"
+        WebElement el3 = wd.findElement(By.cssSelector("[placeholder $='ord']"));
+
+        // Объединение !!
+        //найти элемент div, у которого есть id со значением "root"  и класс со значением container
+        WebElement el6 = wd.findElement(By.cssSelector("div#root.container"));
+        // найти элемент а, у которого есть атрибут href со значением /login
+        WebElement el7 = wd.findElement(By.cssSelector("a[href='/login']"));
+        // найти элемент input, у которого есть атрибут name cо значением email
+        WebElement el8 = wd.findElement(By.cssSelector("input[name='email']"));
+        // найти элемент button, у которого есть атрибут name cо значением login
+        WebElement el9 = wd.findElement(By.cssSelector("button[name='login']"));
 
 
     }
