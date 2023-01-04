@@ -26,6 +26,13 @@ public class Index
         // find Item1 & click() ===> assert that "div-alert" contains message  "Clicked by Item 1"
         WebElement item1 = wd.findElement(By.cssSelector("[href='#item1']"));
         item1.click();
+
+        //wd.findElement(By.cssSelector("")).click();
+       //WebElement container = wd.findElement(By.cssSelector("#alert"));
+        //String message = container.getText();
+       //System.out.println(" text is -->  "+ message);
+       //Assert.assertTrue(message.contains("Clicked by Item 1"));
+
         WebElement divAlert = wd.findElement(By.cssSelector("#alert"));
         String text1 = divAlert.getText();
         Assert.assertTrue(text1.contains("Clicked by Item 1"));
@@ -36,6 +43,11 @@ public class Index
         WebElement divAlert1 = wd.findElement(By.cssSelector("#alert"));
         String text2 = divAlert1.getText();
         Assert.assertTrue(text2.contains("Clicked by Item 3"));
+
+       // WebElement item31 = wd.findElement(By.xpath("//li[3]"));
+        //String item31Text = item31.getText();
+        //message = container.getText();
+        //Assert.assertTrue(message.contains(item31Text));
 
     }
 
